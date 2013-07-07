@@ -1,0 +1,23 @@
+html, body {
+	background-color: #232323;
+	color: #ff003e;
+	font-family: Montserrat, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	font-weight: normal;
+	text-shadow: 2px 0px 3px #7d001f;
+}
+
+header {
+	background-color: #ff003e;
+	width: 100%;
+	color: #ffffff;
+	height: 23px;
+	padding: 7px;
+}
