@@ -7,7 +7,7 @@ Debugger.log = function (message) {
     }
 }
 
-function eventWindowLoaded () {
+function onWindowLoaded () {
     canvasApp();
 }
 
