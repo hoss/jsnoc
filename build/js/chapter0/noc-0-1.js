@@ -25,6 +25,7 @@ function canvasApp () {
         context,
         canvasWidth,
         canvasHeight,
+        nMovesPerFrame = 10,
         canvasBaxCol = "#191919",
         drawCol = "#121212";
 
@@ -45,12 +46,12 @@ function canvasApp () {
         this.y = startY;
     };
 
-    Walker.prototype.draw = function (context) {
+    Walker.prototype.display = function (context) {
         context.fillStyle = drawCol;
         context.fillRect(this.x, this.y, 1, 1);
     }
 
-    Walker.prototype.walk = function () {
+    Walker.prototype.step = function () {
         var choice = Math.random() * 4;
         choice = Math.floor(choice);
         switch (choice){
@@ -76,8 +77,10 @@ function canvasApp () {
     }
 
     function drawScreenLoop() {
-        walker.walk();
-        walker.draw(context);
+        for(var i = 0; i < nMovesPerFrame; i++) {
+            walker.step();
+            walker.display(context);
+        }
         window.requestAnimationFrame(drawScreenLoop);
     }
 
